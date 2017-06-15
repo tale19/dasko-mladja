@@ -1,0 +1,13 @@
+<asx version = "3.0">
+	<Title>Dasko&Mladja</Title>
+	<Author>http://www.daskoimladja.com/</Author>
+	<Copyright>Dasko&Mladja</Copyright>
+
+	<entry>
+		<ref href="http://84.16.241.174:8009/stream" />
+		<Title>Dasko&Mladja</Title>
+		<Author>http://www.daskoimladja.com/</Author>
+		<abstract>Dasko&Mladja</abstract>
+			<Copyright>Dasko&Mladja</Copyright>
+	</entry>
+</asx>

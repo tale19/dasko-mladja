@@ -1,0 +1,778 @@
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0;  
+}
+
+html {
+    font-size: 16px;
+}
+
+#wrapper {
+    margin: 0 auto;
+}
+
+
+/*
+#mobileApp {
+    position: fixed;
+    z-index: 999999;
+    margin: 0 auto;
+    width: 95%;
+    left: 2%;
+    top: 50px;
+    background-color: lime;
+    border: 2px solid red;   
+}
+*/
+
+
+
+.row {
+    
+}
+
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+
+
+h3 {
+    font-size: 2.25rem;
+    font-family: 'Baloo';
+}
+
+h5 {
+    font-family: 'Oswald', Helvetica, sans-serif;
+    font-size: 3.75rem;
+    font-weight: 800;
+}
+
+
+.page-header {
+    background: purple url("../Images/header-xs.jpg") no-repeat top;
+    min-height: 220px;
+    height: 220px;
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+}
+
+@media screen and (min-width: 520px) {
+        .page-header {
+            background-image: url("../Images/header-s.jpg");
+            background-position: top;
+        }
+}
+
+    /* black shader across the header background (can be called specifically via '.page-header > img' selector) */
+    .shader {
+        opacity: 0.5;
+    }
+
+    .header-text {
+        position: absolute; /* places the text above the shader (image), ignoring the natural flow of elements */
+        text-align: center;
+        width: 100%; /* necessary for text-align to work */
+        top: 20px;
+    }
+
+        h1 {
+            font-family: 'Ranga';
+            color: #582913;
+            text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+            font-size: 3.5rem;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+
+        h2 {
+            margin-top: 2rem;
+            font-family: 'Ranga', cursive;
+            color: darkred;
+            font-size: 2rem;
+            text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white; 
+        }
+
+
+
+/* NAVIGATION BAR ELEMENTS */
+
+.nav {
+    height: 40px;
+    width: 100%;
+    background-color: white;
+    margin: 0 auto;
+    position: sticky; /* sticky pushes the next div down instead of floating above it, like fixed position does */
+    top: 0px;
+    box-shadow: 0px 3px 9px 1px #898989;
+    z-index: 999; /* it must have a declared z-index to behave like a sticky element! */
+} 
+
+#menu-button {
+    position: fixed;
+    display: block;
+    z-index: 10000;
+    right: 15px;
+    top: 5px;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    background: url("../Images/menu-button_white.png") no-repeat center;
+    background-size: contain;
+}
+
+#menu-button.displayed {
+    background: url("../Images/menu-close-x.png") no-repeat center;
+    background-size: contain;
+}
+
+.nav #player {
+    display: table;
+/*    position: absolute;*/
+    left: 15px;
+/*    height: 40px;*/
+/*    padding: 5px auto;*/
+/*    background-color: hotpink;*/
+}
+
+        #playlive {
+            display: inline-block;
+            position: relative;
+            top: 1px;
+            border: 3px solid darkred;
+            border-radius: 10px;
+            color: darkred;
+            margin-right: 15px;
+        }
+
+        .nav #playlive p {
+            display: block;
+            position: relative;
+            cursor: default;
+            font-size: 1rem;
+            font-weight: 800;
+            margin: 5px 1rem;
+/*            background-color: yellow;*/
+        }
+
+    .nav #play-pause {
+        display: table-cell;
+        vertical-align: middle;
+        position: relative;
+        font-size: 30px;
+        color: darkslategray;
+    }
+
+    .nav #play-pause:hover {
+        color: darkred;
+        cursor: pointer;
+    }
+
+
+/* THE FOLLOWING CODE IS TO STYLE THE >> MOBILE VIEW << OF THE MENU (display: block, position: fixed) THE SUBMENU */
+
+#desktop-menu {
+    display: none;
+}
+
+
+#mobile-menu {
+    display: none; /* hide menu by default on mobile. Flex? */
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 60vw;
+    background-color: rgba(255,255,255,.95);
+/*    background-color: white;*/
+}
+
+#mobile-menu #mobile-menu-items {
+    margin: 0 auto;
+    width: 60%;
+}
+
+    #mobile-menu-items .menu-item {
+        display: block;
+        position: relative;
+        list-style: none;
+/*        height: 40px; this defines the hight of ALL <li>s so it doesn't give enough room to revealed submenu items. don't define height, so they can push the content down when displayed */
+        top: 6rem;
+        width: 100%;
+        margin: 0 auto;
+        border-top: 1px solid darkred;
+        z-index: 100;
+/*        border: 2px solid yellow;*/
+/*        background-color: magenta;*/
+    }
+
+    #mobile-menu-items .menu-item:last-child {
+        border-bottom: 1px solid darkred;
+    }
+
+
+        #mobile-menu-items .menu-item a {
+            display: block; /* check if inline-block makes the submenu turn on its side -- for landscape view */
+            position: relative;
+            text-align: center;
+            text-decoration: none;
+            padding: 0.4375rem 1rem; /* 7px 16px */
+/*            pointer-events: none;  disables the link from activating */
+            text-transform: uppercase;
+            font-family: 'Raleway', Helvetica;
+            color: darkred;
+        }
+
+        #mobile-menu-items .menu-item a:first-letter {
+            font-size: 1.1em;
+        }
+
+
+        #mobile-menu-items > .menu-item > a {
+            position: relative;
+            font-size: 1.5rem;
+            width: 100%;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        #mobile-menu-items .submenu {
+            position: relative; /* when set to relative, it pushes down the next menu item instead of hovering above it as with absolute positioning */
+/*            z-index: 1;*/
+            display: none;  /* js probably overrides this ??? */
+            list-style: none;
+            width: 80%;
+            margin: 0.4375rem auto;
+            background-color: rgba(255,255,255,0.95);
+        }
+
+            #mobile-menu-items .submenu-item {
+                
+                z-index: 9;
+                position: relative;
+                /*
+                height: 40px;
+*/
+            }
+
+
+
+        /* HIGHLIGHTED ITEMS */
+
+       #mobile-menu-items .highlighted > a {
+            background-color: darkred;
+            color: white;
+        }
+
+
+        #mobile-menu-items .highlighted a {
+        }
+
+
+        #mobile-menu-items .highlighted > a:active {
+            background-color: rgba(255,255,255,.95);
+            color: darkred;
+        }
+
+        /* END OF HIGHLIGHTED ITEMS */
+
+
+
+
+
+                /* 720px AND ABOVE */
+
+
+@media screen and (min-width: 768px) {
+    .page-header {
+        min-height: 420px;
+        height: 420px;
+
+    }
+    
+    #navItemsHolder {
+        display: block;
+        position: relative;
+        height: 40px;
+        margin: 0 auto;
+    }
+    
+    #menu-button {
+        display: none;
+    }
+    
+    #mobile-menu {
+        display: none;
+    }
+
+    .nav #player {
+        display: inline-table;
+        float: left;
+/*        position: relative;*/
+/*        width: 8rem;*/
+    }
+
+        #playlive {
+            display: inline-block;
+            box-sizing: content-box;
+/*            width: 5rem;*/
+/*            position: relative;*/
+        }
+
+        #play-pause {
+            display: inline-block;
+            position: relative;
+            width: 1rem;
+        }
+    
+    #desktop-menu {
+        display: block; /* block needed so "margin: 0 auto" can work */
+        width: 24rem;
+        margin: 0 auto;
+        height: 40px;
+        
+        
+    }
+
+    #desktop-menu-items {
+        position: absolute;
+        display: block; /* OLDER BROWSERS  *** check out if block and inline-block are interchangable here */ 
+        display: inline-flex; /*  NEWER BROWSERS */
+        height: 40px; /* the absolute height must match the height of nav */
+        background-color: white;
+    }
+
+        #desktop-menu-items .menu-item {
+            position: relative;
+            display: inline-block;
+            top: 0;
+            border-left: 1px solid rgba(0,0,0,.2);
+            margin: 0 -0.125rem;
+            padding: 0.0625rem 0;
+        }
+           
+        #desktop-menu-items .menu-item:last-child {
+            border-right: 1px solid rgba(0,0,0,.2);
+        }
+
+
+        #desktop-menu-items .menu-item a {
+            display: block;
+            margin: 0 auto;
+            height: 100%;
+            padding: 0.4375rem 1rem; /* 7px 16px */
+            text-decoration: none;
+/*            pointer-events: none;  disables the link from activating */
+            font-weight: 800;
+            font-size: 1rem;
+            text-transform: uppercase;
+            font-family: 'Oswald';
+            color: darkgray;
+        }
+
+        #desktop-menu-items .menu-item > a::first-letter {
+                        font-size: 1.125rem;
+                    }
+
+
+        #desktop-menu-items .menu-item a:hover {
+            color: grey;
+        }
+
+
+
+            #desktop-menu-items .submenu {
+                display: none; /* displays when its parent menu items is hovered */
+                position: absolute;
+                left: 0px; /* sets the position of the <ul> directly beneath the menu item */
+                text-align: left;
+                background: white;
+                box-shadow: 0px 3px 9px 1px #898989;
+                background-color: white;
+                z-index: -1;
+                width: 100%;
+            }
+
+                
+                #desktop-menu-items .submenu-item {
+                  /*  visibility: hidden; /**/
+                    display: inline-block; /**/
+                    position: relative;
+                    height: 40px;
+                    margin: 0 auto;
+                    width: 100%;
+                    white-space: nowrap;
+                    border: none;
+                    z-index: 2; /* sets every "ordinary" subemnu item above the highlighted one, so it can cast its shadow over it */
+                }
+
+
+                #desktop-menu-items .submenu-item a {
+                  /*  display: block; /* if ignored, it will ignore the margin and padding, but not font and text properties, as they do apply to inline ("a" is an inline element by default) elements. /**/
+                    height: 100%;
+                    font-weight: 800;
+                    font-size: 16px;
+                    text-transform: uppercase;
+                    font-family: 'Oswald';
+                    color: darkgray;
+                }
+
+
+    
+
+
+                #desktop-menu-items .submenu-item a::first-letter {
+                        font-size: 18px;
+                    }
+
+                #desktop-menu-items .submenu-item a:hover {
+                            background-color: darkgray;
+                            color: white;
+                            box-shadow: 0px 1px 1px 1px #898989;
+                        }
+
+
+                /* THE FOLLOWING CODE IS TO SHOW SUBMENU ON HOVER WITH CSS ONLY */
+
+                    #desktop-menu-items .menu-item:hover .submenu {
+                            display: block;
+                        }
+
+                        /* NOW TO DISABLE THIS ON MOBILE VIEW OF THE MENU */
+
+                        #mobile-menu-items .menu-item:hover .submenu {
+                                display: block;
+                            }
+
+    
+                        /* HIGHLIGHTED ITEMS */
+                            
+                           #menu-items .highlighted {
+                                background-color: darkgray;
+                                color: white;
+                                z-index: 1;  /* set it below the z-index of "ordinary" submeny item */
+                            }
+
+/*
+                            #menu-items .highlighted a {
+                                color: white;
+                            }
+*/
+
+                            #desktop-menu-items .highlighted a:hover {
+                                background-color: white;
+                                color: darkgray;
+                                box-shadow: 0px 0px 1px 1px #898989;
+                            }
+
+                        /* HIGHLIGHTED ITEMS */
+
+
+    .banner {
+        
+    }
+    
+    .banner h5 {
+        
+    }
+    
+    .chapter-logo-holder {
+        float: right;
+        margin-right: 60px;
+    }
+    
+}   
+/* end of media query @ >=768px width */
+
+    
+
+/* THE FOLLOWING CODE IS WRITTEN TO BE TARGETED BY JS*/
+
+#menu-items.triggered-mobile {
+    display: none; /* hide menu by default on mobile */
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(250,250,250,.85);
+/*    background-color: white;*/
+}
+
+    #menu-items.triggered-mobile .menu-item {
+        display: block;
+        position: relative;
+        list-style: none;
+/*        height: 40px; defining height prevents the menu item from dropping down to reveal submenu items. don't define height */
+        top: 6rem;
+        width: 15rem;
+        margin: 0 auto;
+        box-shadow: 0px 3px 9px 1px #898989;
+        z-index: 100;
+/*        border: 2px solid yellow;*/
+/*        background-color: magenta;*/
+    }
+
+        #menu-items.triggered-mobile .menu-item a {
+            display: block; /* check if inline-block makes the submenu turn on its side -- for landscape view */
+            position: relative;
+            text-align: center;
+            padding: 0.4375rem 1rem; /* 7px 16px */
+            text-decoration: none;
+/*            pointer-events: none;  disables the link from activating */
+            font-weight: 800;
+            font-size: 1rem;
+            text-transform: uppercase;
+            font-family: 'Oswald';
+            color: darkgray;
+        }
+
+        #menu-items.triggered-mobile > .menu-item > a {
+            pointer-events: auto; /* disables the link from activating */
+            position: relative;
+            font-size: 1.5rem;
+            padding: 7px 0;
+            width: 100%;
+            z-index: -1;
+        }
+
+            #menu-items.triggered-mobile .submenu {
+            display: none;  /* js probably overrides this ??? */
+            position: relative; /* when set to relative, it pushes down the next menu item instead of hovering above it as with absolute positioning */
+            list-style: none;
+            left: -1%;
+            width: 100%;
+            margin-top: 7px;
+            background-color: rgba(235,235,235,.9);
+            z-index: 9999999;
+        }
+
+                #menu-items.triggered-mobile .submenu-item {
+                box-shadow: 0px 3px 9px 1px #898989;
+                z-index: 9;
+                position: relative;
+            }
+
+
+            /*   END OF CODE FOR JS  */
+
+
+
+
+#donation-button {
+    display: block;
+    width: 7rem;
+    background-color: darkgray;
+    color: white;
+}
+
+#donation-button a:hover {
+    background-color: white;
+    color: darkgray;
+    box-shadow: 0px 0px 1px 1px #898989;
+}
+
+
+/* ********** CONTENT ELEMENTS ******** */
+
+.content-holder {
+    margin: 0 auto;
+    background-color: wheat;
+    position: relative;
+}
+
+#welcome {
+    
+}
+
+
+#welcome h3, h4 {
+    text-align: center;
+    font-family: 'Oswald';
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+#donate {
+    margin-top: 3.5rem;
+/*    background-color: #003287;*/  /* dark blue */
+    background-color: rgb(66,192,251);
+    color: white;
+}
+
+#donate h3 {
+    text-align: center;
+    font-family: 'Oswald';
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+}
+
+#donate p {
+    font-size: 1.2em;
+}
+
+#donation-methods {
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#donation-methods h3 {
+    padding-top: 1.2em;
+    margin-bottom: .5em;
+}
+
+#donation-methods .btn-group {
+   
+}
+
+#donation-methods .btn {
+    background-color: white;
+    color: #898989;
+}
+
+#donation-methods .btn:hover {
+    background-color: #898989;
+    color: white;
+}
+
+    #bank-popup {
+        position: absolute;
+        display: none;
+        z-index: 10;
+        top: 0;
+        padding: 15px;
+        border: 2px solid darkred;
+        border-radius: 10px;
+        background-color: white;
+        color: darkred;
+    }
+
+#welcome p {
+    text-align: justify;
+}
+
+.banner {
+    margin: 40px auto;
+}
+
+.chapter-logo-holder {
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: 10px auto;
+}
+
+#about-us {
+    background-color: darkred;
+    margin-top: 3.2em;
+}
+
+    #about-us h5 {
+        text-align: center;
+        color: white;
+    }
+
+#listen {
+    background-color: rgb(66,192,251);
+    margin-top: 3.2em;
+}
+
+    #listen h5 {
+        text-align: center;
+        color: white;
+    }
+
+
+
+@media screen and (min-width: 768px) {
+    
+    .banner {
+        height: 80px;
+    }
+    
+        .banner h5 {
+            float: left;
+            margin: 7px 15px;
+        }
+
+
+        .chapter-logo-holder {
+            float: right;
+            height: 150px;
+            width: 150px;
+            margin: -35px 15px;
+        }
+    
+    #listen .chapter-logo-holder {
+        
+    }
+    
+}
+
+@media screen and (min-width: 2220px) {
+    
+    
+}
+
+
+
+.chapter-logo-holder img {
+    height: 100%;
+    width: 100%;  
+}
+
+
+
+
+.row {
+    
+}
+
+
+
+.audio-players h5 {
+    font-size: 48px;
+    font-weight: 800;
+}
+
+
+.audio-players p {
+    font-size: 12px;
+}
+
+
+
+/* *** FOOTER ELEMENTS *** */
+
+
+.footer {
+    display: block;
+    position: relative;
+    bottom: 0;
+    height: 70px; /* izbriši kad ubaciš sadržaj */
+    border: 1px black solid;
+    background-color: rgba(171,84,25,1);
+    font-family: Oswald, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+    .footer p {
+    display: block;
+    position: absolute;
+    text-align: right;   
+    bottom: 0px;
+    height: 20px;
+    padding-right: 45px;
+}
+
+#about-us {
+    
+}

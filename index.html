@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE-edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mlaško &amp; Dađa</title>
+
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/tale.css">
+<link href="https://fonts.googleapis.com/css?family=Baloo|Combo|Dancing+Script|Indie+Flower|Lato|Open+Sans+Condensed:300|Oswald|Raleway|Ranga|Roboto" rel="stylesheet">
+</head>
+
+<body>
+<div id="wrapper">
+<!--    <div id="mobileApp" class="visible-xs">Skinite mobilnu aplikaciju!</div>    -->
+    <div class="page-header">
+    <img class="shader" src="Images/blackout.jpg" width="100%" height="100%" />
+        <div class="header-text">
+            <h1>Mlaško &amp; Dađa</h1>  
+            <h2>Svakog radnog jutra <span style="white-space: nowrap;">7 - 10h</span></h2>
+        </div> <!-- header text -->
+    </div>  <!-- page-header -->
+    <div class="nav container-fluid">
+        <div id="navItemsHolder" class="container">
+            <div id="menu-button"></div>   <!-- menu button -->
+
+            <div id=player>
+                <audio id="stream" src="http://84.16.241.174:8009/stream" type="audio/mp4"></audio>
+                <div id="playlive"><p>LIVE</p></div>
+                <span id="play-pause" class="glyphicon glyphicon-play"></span>
+                <!-- <span id="mute-unmute" class="glyphicon glyphicon-volume-off"></span> -->
+            </div> <!-- audio player -->
+
+            <div id="mobile-menu">
+                <ul id="mobile-menu-items">
+                    <li class="menu-item menu-item-no-submenu">
+                        <a href="index.html">Početna</a>
+                    </li>
+
+                    <li class="menu-item menu-item-no-submenu">
+                        <a href="#about-us">O nama</a>
+                    </li>
+
+                    <li tabindex="0" class="menu-item onclick-menu highlighted">
+                        <a href="#donation-methods">Podrži!</a>
+                        <ul class="submenu">
+                            <li class="submenu-item"><a href="https://www.patreon.com/daskoimladja" target="_blank">Patreon</a></li>
+                            <li class="submenu-item"><a href="https://www.paypal.me/daskoimladja/" target="_blank">PayPal</a></li>
+                            <li class="submenu-item"><a href="#">Račun</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="menu-item menu-item-no-submenu">
+                        <a href="#">Podcast</a>
+                    </li>
+
+                    <li class="menu-item menu-item-no-submenu">
+                        <a href="#">Shop</a>
+                    </li>
+                </ul>   <!-- mobile menu items -->
+            </div>  <!-- mobile menu -->
+
+            <div id="desktop-menu">  <!-- menu container -->
+                <ul id="desktop-menu-items" class="mobile-menu">
+                    <li class="menu-item">
+                        <a href="index.html">Početna</a>
+                    </li>
+
+                    <li class="menu-item">
+                        <a href="#about-us">O nama</a>
+                    </li>
+
+                    <li class="menu-item highlighted">
+                        <a href="#donation-methods">Podrži</a>
+                        <ul class="submenu">
+                            <li class="submenu-item"><a href="#">Patreon</a></li>
+                            <li class="submenu-item"><a href="#">PayPal</a></li>
+                            <li class="submenu-item"><a href="#">Račun</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="menu-item">
+                        <a href="#">Podcast</a>
+                    </li>
+
+                    <li class="menu-item">
+                        <a href="#">Shop</a>
+                    </li>
+                </ul>	
+            </div>  
+
+    <!--
+                <div id="donation-button">
+                        <a href="#" class="btn">Podrži</a>
+                </div>
+    -->
+        </div> <!-- navItemsHolder -->
+    </div>	<!-- nav -->
+    <div class="content-holder">
+        <div id="welcome" class="container-fluid">
+            <div class="contaner">
+                <h3>Dobrodošli na sajt Mlaška i Dađe!</h3>
+                <h4>Ovo je mesto koje će vas podsećati na rano jutro, ustajanje, hladnoću zimskog i lažnu lepotu letnjeg jutra.</h4>
+            </div>
+            <div class="container">
+                <p>Ovde možete i podmiriti sve svoje potrebe za Daškom i Mlađom. Trudićemo se da svako jutro učinimo manje groznim a onima koji nas prate na podcastu, jer imaju bolji život, bez jutarnjeg ustajanja, da ulepšamo dan ili noć. Bez cenzure, bez ičijih pritisaka. Odgovaramo samo sopstvenoj savesti, ukusu i vama. Radio kakav smo oduvek želeli. Sa ambicijom da ovo mesto na netu postane stecište svih slobodnomislećih ljudi koji imaju šta da kažu. Kad na programu nije ALARM, ovde će uvek biti dobre muzike a nadamo se i još sadržaja. Ne oklevajte da nam pišete i javljate nam sve što imate, nešto će sigurno biti i važno i pametno!</p>
+                <br/>
+                <h4>Live SMS nam šaljite na <span style="white-space:nowrap;">066/44-22-66</span> <br/> Cena obične poruke.</h4>
+            </div>
+            
+        </div> <!-- welcome -->
+        
+        <div class="container">
+            <div id="donate" class="jumbotron">
+                <h3>Podrži Daška i Mlađu</h3>
+                <p>Ovo ne bi bilo moguće da nema vas koji nas podržavate. Zapravo, ne bi bilo moguće bez nas, ali i vi ste podjednako važni!</p>
+                <p>Oštro sečivo političke džiberizacije amputiralo nas je sa RTV 1. oktobra 2016. Tada smo odlučili da probamo ovo – naš sopstveni internet radio program i podcast, i da živimo od direktne finansijske podrške naših slušalaca, tj. vas! Evo nas na početku realizacije te ideje, poželimo nam mnogo uspeha...</p>
+                <div id="donation-methods">
+                    <h3>Doniraj</h3>
+                    <div id="bank-popup">
+                        <p>Mi smo pre svega ljudi iz naroda, tako da donacije možete da uplatite i na naš račun u Vojvođanskoj banci.<br/>Broj računa je <span style="display:inline-block; margin-bottom:20px; font-weight:bold; white-space:nowrap;">355-0003200537158-02</span><br/> Za ostala polja budite kreativni.</p>
+                        
+                        <button type="button" class="btn btn-primary" style="margin-top:20px;">OK</button>
+                    </div>
+                    <p>Redovnim plaćanjem daškoimlađarine pomažete malom Feđi i ne tako malom Dašku da ne budu gladni. Jer od gladi se dobija ognica efimera. Ognica efimera jaže javlajeca od gladi. 1 evro svakog meseca je više nego 5 evra jednom. Ali najbolje je 5 evra svakog meseca.</p>
+                    <div class="btn-group btn-group">
+                        <button type="button" class="btn btn-primary">
+                            <a href="https://www.patreon.com/daskoimladja" target="_blank">Patreon</a>
+                        </button>
+                        <button type="button" class="btn btn-primary">
+                            <a href="https://www.paypal.me/daskoimladja/" target="_blank">PayPal</a>
+                        </button>
+                        <button id="bank" type="button" class="btn btn-primary">Račun</button>
+                    </div>
+                </div>
+            </div> <!-- donate jumbotron -->
+        </div>  <!-- donate container -->
+        
+        <div id="about-us" class="container-fluid banner">
+            <div class="container">
+                <h5>Ko smo mi</h5>
+                <div class="chapter-logo-holder"><img src="Images/DaskoiMladja.png"/></div>
+            </div>  
+        </div>  <!-- banner -->
+        
+        <div class="container">            
+            <p>Sve je počelo kada je Mlađa, tezgareći kao Deda Mraz, Dašku doneo paketić za Novu 1987. u firmi gde su radili Daškovi mama i tata... Baš smo skoro nešto računali i mislimo da se poznajemo negde oko 20 godina. Stari drugari sa pank scene. Svirali u bendovima, pravili fanzine, radio emisije, ozbiljne časopise, organizovali koncerte i žurke. Ponovo se našli na zajedničkom radio poslu u rano proleće 2011. i otad se skoro svako jutro gledamo i slušamo. Jutarnji program Uzbudilnik radili smo na ASFM radiju i brzo postigli značajan uspeh, nakon toga prešli smo na B92 radio, sa nacionalnom frekvencijom i iz Novog Sada godinu ipo dana budili ljude u Srbiji i svuda po svetu. Bežeći od kretenističkog formatiranja, obreli smo se na ORadiju RTV gde smo se najlepše moguće skućili i opustili.</p>
+
+            <p>Čujemo se ovde a vidimo se i uživo na nekom od naših živih nastupa koji se, adekvatno, zovu Chabaret...</p>
+
+            <p>
+            Cmok, cmok! <br/>
+            Daško i Mlađa, <br/>
+            Novi Sad, <br/> 
+            Novembar 2016.
+            </p>
+        </div>  <!-- about-us  -->
+        <div id="listen" class="container-fluid banner">
+            <div class="container">
+                <h5>Slušaj</h5>
+                <div class="chapter-logo-holder"><img src="Images//play-icon-outlined.png"/></div>
+            </div>  
+        </div>  <!-- banner -->
+        
+        <div class="container">
+            <div class="row audio-players">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <h5><a href="#col1content" data-toggle="collapse">Player 1</a></h5>
+                    <div id="col1content" class="collapse"><span style="color:darkred; font-size:18px;">Osim što je cimanje u CSS-u zameniti boju fonta kad je tekst direktno u divu</span><br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac tristique mauris, in tristique turpis. Duis congue efficitur congue. Curabitur mattis nulla vel mi pellentesque molestie. Donec convallis, turpis quis aliquet ullamcorper, lacus tellus lacinia orci, nec suscipit felis quam eget eros. Cras quis lacus a nisl accumsan pharetra sit amet vel ipsum. Nunc vel tellus in diam interdum gravida. Vestibulum volutpat sed ante vitae imperdiet. Vestibulum efficitur posuere dictum. Quisque pharetra, enim at rhoncus lacinia, nisl eros ultrices felis, in luctus nulla eros sed libero. Phasellus rutrum non ex cursus cursus. Nam et ultrices elit. Ut scelerisque commodo dui eget varius. Duis vitae tincidunt est. Aenean et egestas mauris, eu pharetra nulla. Aliquam erat volutpat.</div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <h5><a href="#col2content" data-toggle="collapse">Player 2</a></h5>
+                    <div id="col2content" class="collapse in"><span style="color:red; font-size:18px;">Radi sa divom</span><br/>Suspendisse volutpat est vel mauris laoreet, non laoreet nisl cursus. Nam vitae justo quis est fringilla commodo sed vel orci. Fusce congue eleifend augue sit amet auctor. Curabitur cursus eu urna at interdum. Ut luctus semper est, ut faucibus elit suscipit id. Donec odio sem, rutrum mollis ipsum a, rutrum tristique elit.</div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <h5><a href="#col3content" data-toggle="collapse">Player 3</a></h5>
+                    <p id="col3content" class="collapse in"><span style="color:red; font-size:18px;">A radi i sa paragrafom</span><br/>Phasellus rutrum non ex cursus cursus. Nam et ultrices elit. Ut scelerisque commodo dui eget varius. Ut ac nunc sodales, condimentum neque vitae, suscipit magna. Integer aliquam viverra suscipit. Aliquam viverra enim ipsum, sed facilisis ipsum commodo id. Ut id quam sed sapien vestibulum rutrum a at dui. Vivamus elementum vehicula elit, eget tempus urna hendrerit et. Integer eget tortor scelerisque, faucibus lectus nec, aliquet felis. Suspendisse volutpat est vel mauris laoreet, non laoreet nisl cursus. Nam vitae justo quis est fringilla commodo sed vel orci. Fusce congue eleifend augue sit amet auctor. Curabitur cursus eu urna at interdum. Ut luctus semper est, ut faucibus elit suscipit id. Donec odio sem, rutrum mollis ipsum a, rutrum tristique elit.</p>
+                </div> 
+
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <h5><a href="#col4content" data-toggle="collapse">Player 4</a></h5>
+                    <p id="col4content" class="collapse"><span style="font-size: 20px; font-weight: 600; color: orange; text-align: right;"> A zašto ne bi? :)</span><br/>Ut ac nunc sodales, condimentum neque vitae, suscipit magna. Integer aliquam viverra suscipit. Aliquam viverra enim ipsum, sed facilisis ipsum commodo id. Ut id quam sed sapien vestibulum rutrum a at dui. Vivamus elementum vehicula elit, eget tempus urna hendrerit et. Integer eget tortor scelerisque, faucibus lectus nec, aliquet felis. Suspendisse volutpat est vel mauris laoreet, non laoreet nisl cursus. Nam vitae justo quis est fringilla commodo sed vel orci. Fusce congue eleifend augue sit amet auctor. Ut id quam sed sapien vestibulum rutrum a at dui. Vivamus elementum vehicula elit, eget tempus urna hendrerit et. Integer eget tortor scelerisque, faucibus lectus nec, aliquet felis. Suspendisse volutpat est vel mauris laoreet, non laoreet nisl cursus. Curabitur cursus eu urna at interdum. Ut luctus semper est, ut faucibus elit suscipit id. Donec odio sem, rutrum mollis ipsum a, rutrum tristique elit.</p>
+                </div>
+            </div> <!-- audio-players row --> 
+        </div>  <!-- audio players container -->
+    </div>  <!-- content-holder -->
+    <div class="footer">
+        <p>Copyright &copy; Stefan Tatić 2017</p>
+    </div>
+</div>  <!-- wrapper -->
+
+<script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
+<!-- Bootstrap js CDN -->
+<script src="js/bootstrap.js" crossorigin="anonymous"></script>
+<script src="js/tale.js"></script>
+
+</body>
+</html>
