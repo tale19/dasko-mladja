@@ -601,7 +601,7 @@ h5 {
 #donate {
     margin-top: 3.5rem;
 /*    background-color: #003287;*/  /* dark blue */
-    background-color: rgb(66,192,251);
+    background-color: rgb(36, 188, 16);
     color: white;
 }
 
@@ -675,6 +675,7 @@ h5 {
 }
 
     #about-us h5 {
+        
         text-align: center;
         color: white;
     }
@@ -735,7 +736,9 @@ h5 {
     
 }
 
-
+.audio-players {
+    margin-bottom: 100px;
+}
 
 .audio-players h5 {
     font-size: 48px;
