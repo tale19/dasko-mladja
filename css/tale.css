@@ -472,19 +472,29 @@ h5 {
 
                         /* HIGHLIGHTED ITEMS */
 
-
+    
+        
     .banner {
-        
+        height: 80px;
+        margin: 400px auto;
     }
+
+        .banner h5 {
+            float: left;
+            margin: 7px 15px;
+        }
+
+
+        .chapter-logo-holder {
+            float: right;
+            height: 150px !important;
+            width: 150px !important;
+            margin: -35px 15px !important;
+        }
+
+
+
     
-    .banner h5 {
-        
-    }
-    
-    .chapter-logo-holder {
-        float: right;
-        margin-right: 60px;
-    }
     
 }   
 /* end of media query @ >=768px width */
@@ -659,6 +669,15 @@ h5 {
     text-align: justify;
 }
 
+.live-sms {
+    margin: 15px auto;
+    text-align: center !important;
+    font-size: 1.75rem;
+    font-weight: 800;
+    font-family: "Oswald";
+    color: darkred;
+}
+
 .banner {
     margin: 40px auto;
 }
@@ -698,26 +717,6 @@ h5 {
 
 @media screen and (min-width: 768px) {
     
-    .banner {
-        height: 80px;
-    }
-    
-        .banner h5 {
-            float: left;
-            margin: 7px 15px;
-        }
-
-
-        .chapter-logo-holder {
-            float: right;
-            height: 150px;
-            width: 150px;
-            margin: -35px 15px;
-        }
-    
-    #listen .chapter-logo-holder {
-        
-    }
     
 }
 
@@ -740,20 +739,23 @@ h5 {
     
 }
 
-.audio-players {
+.media {
     margin-bottom: 100px;
     color: aqua;
     
 }
 
-.audio-players h5 {
+.media h5 {
 /*    font-size: 48px;*/
 /*    font-weight: 800;*/
 }
 
 
-.audio-players p {
-/*    font-size: 12px;*/
+.media p {
+    display: inline;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: "Lato", sans-serif;
 }
 
 .playlists {
@@ -783,7 +785,8 @@ h5 {
 
 
 .playlist {
-    background-color: magenta;
+/*    background-color: magenta;*/
+    
     
 }
 
@@ -814,3 +817,5 @@ h5 {
 #about-us {
     
 }
+
+
