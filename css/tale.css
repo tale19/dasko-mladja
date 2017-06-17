@@ -646,12 +646,12 @@ h5 {
 }
 
     #donation-methods h3 {
-        padding-top: 1.2em;
-        margin-bottom: .5em;
+        padding-top: 40px;
+        margin-bottom: 20px;
     }
 
     #donation-methods .btn-group {
-
+        
     }
 
     #donation-methods .btn {
@@ -660,7 +660,7 @@ h5 {
     }
 
     #donation-methods .btn:hover {
-        background-color: #898989;
+        background-color: rgb(39, 85, 147);
         color: white;
     }
 
@@ -712,48 +712,65 @@ h5 {
 
 
 
-
-@media screen and (min-width: 768px) {
-    
-    
-}
-
-@media screen and (min-width: 2220px) {
-    
-    
-}
-
-
-
 .chapter-logo-holder img {
     height: 100%;
     width: 100%;  
 }
 
-
-
-
-.row {
-    
-}
-
 .media {
     margin-bottom: 100px;
-    color: aqua;
     
 }
 
-h3 {
+.media h3 {
     
 }
 
 
-.media h5 {
-/*    font-size: 48px;*/
-/*    font-weight: 800;*/
+.media h6 {
+    
+    font-size: 48px;
+    font-weight: 800;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 800;
+    font-family: 'Oswald';
+    text-transform: uppercase;
+/*    vertical-align: middle;*/
 }
 
 
+.playlists {
+    float: left;
+    margin: 20px auto;
+}
+
+.playlists  > a {
+    display: table;
+}
+
+    .playlists a img {
+        vertical-align: middle;
+        width: 40px;
+        height: 40px;
+
+    }
+
+    .playlists a span {
+        vertical-align: middle;
+        color: rgb(206, 9, 9);
+        margin-left: 5px;
+        font-size: 2.25rem;
+        font-weight: 800;
+        font-family: 'Oswald';
+        text-transform: uppercase;
+    }
+
+.playlist {
+/*    background-color: magenta;*/
+    
+    
+}
 
 .playlist p {
     display: inline;
@@ -762,37 +779,33 @@ h3 {
     font-family: "Lato", sans-serif;
 }
 
-.playlists {
+.tune-in {
+    float: right;
     margin: 20px auto;
-    
-}
-
-.playlists > h5 > a {
-    display: table; /* verovatno ne mora jer vertical-align utiče na inline elemente, ne samo na tabelu */
-}
-
-.playlists a img {
-    width: 40px;
-    height: 40px;
-    vertical-align: middle;
-    
-}
-
-.playlists a span {
-    color: rgb(206, 9, 9);
-    margin-left: 5px;
-    font-size: 2.25rem;
-    font-family: 'Oswald';
-    text-transform: uppercase;
-    vertical-align: middle;
 }
 
 
-.playlist {
-/*    background-color: magenta;*/
-    
-    
+.tune-in  > a {
+    display: table;
 }
+
+    .tune-in a img {
+        vertical-align: middle;
+        width: 40px;
+        height: 40px;
+
+    }
+
+    .tune-in a span {
+        vertical-align: middle;
+        color: rgb(38, 188, 176);
+        margin-left: 5px;
+        font-size: 2.25rem;
+        font-weight: 800;
+        font-family: 'Oswald';
+        text-transform: uppercase;
+    }
+
 
 /* *** FOOTER ELEMENTS *** */
 
@@ -817,4 +830,17 @@ h3 {
     height: 20px;
     padding-right: 45px;
 }
+
+
+@media screen and (min-width: 768px) {
+    
+    
+}
+
+@media screen and (min-width: 2220px) {
+    
+    
+}
+
+
 
