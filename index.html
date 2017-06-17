@@ -168,8 +168,8 @@
                 <div class="listen-live col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                 <h3>Slušaj uživo</h3>
                     <div class="playlists">
-                    <a href="#col1content" data-toggle="collapse" title="Skini plejlistu za plejer koji koristiš i slušaj uživo na svom računaru"><img src="Images/playlist-icon-red-200.png"/><span>Plejliste</span></a>
-                        <div id="col1content" class="collapse">
+                    <a href="#collapsed-playlists" data-toggle="collapse" title="Skini plejlistu za plejer koji koristiš i slušaj uživo na svom računaru"><img src="Images/playlist-icon-red-200.png"/><span>Plejliste</span></a>
+                        <div id="collapsed-playlists" class="collapse">
                             <div class="playlist">
                                 <a href="audio/audio-playlist.pls" download="daskoimladja-playlist.pls">
                                     <img src="Images/media-Winamp.ico" />
@@ -199,23 +199,30 @@
                     <div class="tune-in">
                         <a href="http://tunein.com/radio/RADIO-REPUBLIKA-s282527" target="_blank" title="Slušaj uživo preko tunein.com"><img src="Images/tunein-icon-512.png"/><span>TuneIn</span></a>
                     </div> <!-- TuneIn -->
-                    
-                    
                 </div> <!-- listen-live -->
                 
                 <div class="listen-recorded col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                <h3>Slušaj Odloženo</h3>
-                    <div class="media-type">
-                    <h6><a href="#col2content" data-toggle="collapse" title="Skini snimak emisije i slušaj kad god poželiš">Podcast</a></h6>
-                    <div id="col2content" class="collapse in">
-                        <a href="http://podcast.daskoimladja.com/?p=archive&cat=sa_muzikom" target="_blank">Sa muzikom</a>
-                        <a href="http://podcast.daskoimladja.com/?p=archive&cat=bez_muzike" target="_blank">Bez muzike</a>
-                    </div> <!-- collapsed podcast menu --> 
-                    </div>  <!-- podcast -->
-                    <div class="media-type">
-                        <h6><a href="#col3content" data-toggle="collapse">Soundcloud</a></h6>
-                        <p id="col3content" class="collapse in">Phasellus rutrum non ex cursus cursus. Nam et ultrices elit.</p>
-                    </div>  <!-- soundcloud --> 
+                <h3>Slušaj snimak</h3>
+                    <div class="podcasts">
+                    <a href="#collapsing-podcast" data-toggle="collapse" title="Skini snimak emisije i slušaj kad god poželiš"><img src="Images/playlist-icon-blue-40.png"/><span>Podcast</span></a>
+                        <div id="collapsing-podcast" class="collapse">
+                            <div class="podcast">
+                                <a href="http://podcast.daskoimladja.com/?p=archive&cat=sa_muzikom" target="_blank">
+                                    <img src="" />
+                                    <p>Sa muzikom</p>
+                                </a>
+                            </div>        
+                            <div class="podcast">
+                                <a href="http://podcast.daskoimladja.com/?p=archive&cat=bez_muzike" target="_blank">
+                                    <img src="" />
+                                    <p>Bez muzike</p>
+                                </a>
+                            </div>        
+                        </div> <!-- collapsing podcasts -->
+                    </div> <!-- podcasts -->
+                    <div class="soundcloud">
+                        <a href="https://soundcloud.com/daskoimladja" target="_blank" title="Slušaj podcast (bez muzike) na soundcloud.com"><img src=""/><span>Soundcloud</span></a>
+                    </div> <!-- Soundcloud -->
                 </div> <!-- listen-recorded --> 
             </div> <!-- audio-players row --> 
         </div>  <!-- audio players container -->

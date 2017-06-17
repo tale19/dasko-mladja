@@ -723,7 +723,7 @@ h5 {
 }
 
 .media h3 {
-    
+    margin-top: 40px;
 }
 
 
@@ -784,7 +784,6 @@ h5 {
     margin: 20px auto;
 }
 
-
 .tune-in  > a {
     display: table;
 }
@@ -805,6 +804,74 @@ h5 {
         font-family: 'Oswald';
         text-transform: uppercase;
     }
+
+.podcasts {
+    float: left;
+    margin: 20px auto;
+}
+
+.podcasts  > a {
+    display: table;
+}
+
+    .podcasts a img {
+        vertical-align: middle;
+        width: 40px;
+        height: 40px;
+
+    }
+
+    .podcasts a span {
+        vertical-align: middle;
+        color: rgb(38, 188, 176);
+        margin-left: 5px;
+        font-size: 2.25rem;
+        font-weight: 800;
+        font-family: 'Oswald';
+        text-transform: uppercase;
+    }
+
+.podcast {
+/*    background-color: magenta;*/
+}
+
+.podcast p {
+    display: inline;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: "Lato", sans-serif;
+}
+
+
+
+
+.soundcloud {
+    float: right;
+    margin: 20px auto;
+}
+
+.soundcloud  > a {
+    display: table;
+}
+
+    .soundcloud a img {
+        vertical-align: middle;
+        width: 40px;
+        height: 40px;
+
+    }
+
+    .soundcloud a span {
+        vertical-align: middle;
+        color: rgb(38, 188, 176);
+        margin-left: 5px;
+        font-size: 2.25rem;
+        font-weight: 800;
+        font-family: 'Oswald';
+        text-transform: uppercase;
+    }
+
+
 
 
 /* *** FOOTER ELEMENTS *** */
