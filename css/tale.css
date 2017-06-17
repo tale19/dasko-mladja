@@ -26,23 +26,26 @@ html {
 }
 */
 
-
-
-.row {
-    
-}
-
-
 a,
 a:hover {
     text-decoration: none;
 }
 
 
-
 h3 {
-    font-size: 2.25rem;
-    font-family: 'Baloo';
+    text-align: center;
+    font-size: 2.75rem;
+    font-weight: 800;
+    font-family: 'Oswald';
+    text-transform: uppercase;
+}
+
+h4 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+    font-family: 'Oswald';
+    text-transform: uppercase;
 }
 
 h5 {
@@ -601,69 +604,13 @@ h5 {
 }
 
 
-#welcome h3, h4 {
-    text-align: center;
-    font-weight: 800;
-    font-family: 'Oswald';
-    text-transform: uppercase;
+#welcome h3 {
+    margin-top: 30px;
 }
 
-#donate {
-    margin-top: 3.5rem;
-/*    background-color: #003287;*/  /* dark blue */
-    background-color: rgb(36, 188, 16);
-    color: white;
+#welcome h4 {
+    margin: 10px auto 20px auto;
 }
-
-#donate h3 {
-    text-align: center;
-    font-family: 'Oswald';
-    font-weight: 800;
-    text-transform: uppercase;
-    margin-bottom: 1em;
-}
-
-#donate p {
-    text-align: justify;
-    font-size: 1.2em;
-}
-
-#donation-methods {
-    position: relative;
-    margin: 0 auto;
-    text-align: center;
-}
-
-#donation-methods h3 {
-    padding-top: 1.2em;
-    margin-bottom: .5em;
-}
-
-#donation-methods .btn-group {
-   
-}
-
-#donation-methods .btn {
-    background-color: white;
-    color: #898989;
-}
-
-#donation-methods .btn:hover {
-    background-color: #898989;
-    color: white;
-}
-
-    #bank-popup {
-        position: absolute;
-        display: none;
-        z-index: 10;
-        top: 0;
-        padding: 15px;
-        border: 2px solid darkred;
-        border-radius: 10px;
-        background-color: white;
-        color: darkred;
-    }
 
 #welcome p {
     text-align: justify;
@@ -677,6 +624,57 @@ h5 {
     font-family: "Oswald";
     color: darkred;
 }
+
+
+
+#donate {
+    margin-top: 3.5rem;
+/*    background-color: #003287;*/  /* dark blue */
+    background-color: rgb(36, 188, 16);
+    color: white;
+}
+
+#donate p {
+    text-align: justify;
+    font-size: 1.2em;
+}
+
+#donation-methods {
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+}
+
+    #donation-methods h3 {
+        padding-top: 1.2em;
+        margin-bottom: .5em;
+    }
+
+    #donation-methods .btn-group {
+
+    }
+
+    #donation-methods .btn {
+        background-color: white;
+        color: #898989;
+    }
+
+    #donation-methods .btn:hover {
+        background-color: #898989;
+        color: white;
+    }
+
+    #bank-popup {
+        position: absolute;
+        display: none;
+        z-index: 10;
+        top: 0;
+        padding: 15px;
+        border: 2px solid darkred;
+        border-radius: 10px;
+        background-color: white;
+        color: darkred;
+    }
 
 .banner {
     margin: 40px auto;
@@ -745,13 +743,19 @@ h5 {
     
 }
 
+h3 {
+    
+}
+
+
 .media h5 {
 /*    font-size: 48px;*/
 /*    font-weight: 800;*/
 }
 
 
-.media p {
+
+.playlist p {
     display: inline;
     font-size: 1.2rem;
     font-weight: 600;
@@ -763,8 +767,8 @@ h5 {
     
 }
 
-.playlists > h4 > a {
-    display: table;
+.playlists > h5 > a {
+    display: table; /* verovatno ne mora jer vertical-align utiče na inline elemente, ne samo na tabelu */
 }
 
 .playlists a img {
@@ -813,9 +817,4 @@ h5 {
     height: 20px;
     padding-right: 45px;
 }
-
-#about-us {
-    
-}
-
 
