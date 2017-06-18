@@ -659,16 +659,19 @@ h5 {
     }
 
     #donation-methods .btn-group {
-        
+        border: none;
     }
 
     #donation-methods .btn {
+        border: 1px solid darkred;
         background-color: white;
-        color: lime;
+        color: darkred;
+        font-size: 1rem;
+        font-weight: 600;
     }
 
     #donation-methods .btn:hover {
-        background-color: rgb(39, 85, 147);
+        background-color: rgb(36, 188, 16);
         color: white;
     }
 
@@ -697,6 +700,11 @@ h5 {
     margin: 10px auto;
 }
 
+    .chapter-logo-holder img {
+        height: 100%;
+        width: 100%;  
+    }
+
 #about-us {
     background-color: darkred;
     margin-top: 3.2em;
@@ -719,14 +727,6 @@ h5 {
     }
 
 
-
-
-
-.chapter-logo-holder img {
-    height: 100%;
-    width: 100%;  
-}
-
 .media {
     margin-bottom: 100px;
     
@@ -736,7 +736,7 @@ h5 {
     margin-top: 40px;
 }
 
-
+/* nema h6 */
 .media h6 {
     
     font-size: 48px;
@@ -749,137 +749,132 @@ h5 {
 /*    vertical-align: middle;*/
 }
 
-
-.playlists {
-    float: left;
-    margin: 20px auto;
+.listen-live,
+.listen-recorded {
+/*    padding: 0 50px;*/
 }
 
-.playlists  > a {
+.media-type {
+    margin-top: 20px;
+/*
+    margin: 20px auto 20px 50px;
+    display: block;
+    width: 100%;
+    align-content: center;
+*/
+}
+
+.media h3 + .media-type {
+    margin-top: 30px;
+}
+
+.media-type a {
     display: table;
 }
 
-    .playlists a img {
-        vertical-align: middle;
-        width: 40px;
-        height: 40px;
 
+.media-type a img {
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+}
+
+.media-type > a span {
+    vertical-align: middle;
+    margin-left: 5px;
+    font-size: 2rem;
+    font-weight: 800;
+    font-family: 'Oswald';
+    text-transform: uppercase;
+}
+
+    .media .collapse p {
+        display: inline;
+        margin-left: 10px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        font-family: "Lato", sans-serif;
     }
 
-    .playlists a span {
-        vertical-align: middle;
+
+#playlists {
+    
+}
+
+#playlists  > a {
+    
+}
+
+    #playlists a img {
+        
+    }
+
+    #playlists a span {
         color: rgb(206, 9, 9);
-        margin-left: 5px;
-        font-size: 2.25rem;
-        font-weight: 800;
-        font-family: 'Oswald';
-        text-transform: uppercase;
     }
 
-.playlist {
-/*    background-color: magenta;*/
-    
-    
-}
-
-.playlist p {
-    display: inline;
-    margin-left: 10px;
-    font-size: 1.2rem;
-    font-weight: 600;
-    font-family: "Lato", sans-serif;
-    color: rgb(206, 9, 9);
-}
-
-.tune-in {
-    float: right;
-    margin: 20px auto;
-}
-
-.tune-in  > a {
-    display: table;
-}
-
-    .tune-in a img {
-        vertical-align: middle;
-        width: 40px;
-        height: 40px;
-
+    .playlist {
+        
     }
 
-    .tune-in a span {
-        vertical-align: middle;
+    .playlist p {
+        color: rgb(206, 9, 9);
+    }
+
+#tune-in {
+    
+}
+
+#tune-in  > a {
+    
+}
+
+    #tune-in a img {
+        
+    }
+
+    #tune-in a span {
         color: rgb(38, 188, 176);
-        margin-left: 5px;
-        font-size: 2.25rem;
-        font-weight: 800;
-        font-family: 'Oswald';
-        text-transform: uppercase;
     }
 
-.podcasts {
-    float: left;
-    margin: 20px auto;
+#podcasts {
+    
 }
 
-.podcasts  > a {
-    display: table;
+#podcasts  > a {
+     
 }
 
-    .podcasts a img {
-        vertical-align: middle;
-        width: 40px;
-        height: 40px;
+    #podcasts a img {
+        
+}
 
-    }
-
-    .podcasts a span {
-        vertical-align: middle;
+    #podcasts a span {
         color: rgb(147, 11, 137);
-        margin-left: 5px;
-        font-size: 2.25rem;
-        font-weight: 800;
-        font-family: 'Oswald';
-        text-transform: uppercase;
     }
 
 .podcast {
-/*    background-color: magenta;*/
+    
 }
 
 .podcast p {
-    display: inline;
-    margin-left: 10px;
-    font-size: 1.2rem;
-    font-weight: 600;
-    font-family: "Lato", sans-serif;
     color: rgb(147, 11, 137);
 }
 
-.soundcloud {
-    float: right;
-    margin: 20px auto;
+#soundcloud {
+    
 }
 
-.soundcloud  > a {
-    display: table;
+#soundcloud  > a {
+    
 }
 
-    .soundcloud a img {
-        vertical-align: middle;
-        width: 40px;
-        height: 40px;
-
+    #soundcloud a img {
+        
     }
 
-    .soundcloud a span {
-        vertical-align: middle;
+    #soundcloud a span {
         color: rgb(216, 88, 7);
-        margin-left: 5px;
-        font-size: 2.25rem;
-        font-weight: 800;
-        font-family: 'Oswald';
-        text-transform: uppercase;
     }
 
 
