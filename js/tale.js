@@ -12,7 +12,11 @@ function main() {
         $('.submenu-items').hide();
     });
 
-    
+    // Disable underlined css links after click
+    $('div a').click(function() {
+        $(this).css('text-decoration', 'none');
+        console.log('link clicked on');
+    });
     
     // To toggle mobile menu on menu button click
 //    $('.menu-items').hide();
