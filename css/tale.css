@@ -663,9 +663,9 @@ h5 {
     }
 
     #donation-methods .btn {
-        border: 1px solid darkred;
-        background-color: white;
-        color: darkred;
+        border: 1px solid rgb(36, 188, 16);
+        background-color: lightgrey;
+        color: rgb(36, 188, 16);
         font-size: 1rem;
         font-weight: 600;
     }
