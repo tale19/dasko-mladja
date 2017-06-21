@@ -735,6 +735,8 @@ h5 {
 
 .media h3 {
     margin-top: 40px;
+    margin-bottom: 70px;
+    color: rgb(66,192,251);
 }
 
 /* nema h6 */
@@ -883,7 +885,8 @@ h5 {
 /* *** SHOP ELEMENTS *** */
 
 #shop {
-    background-color: rgb(0,128,0);
+    background-color: rgb(0, 128 ,0);
+    margin-bottom: 0; /** overrides banner bottom */
 }
 
     #shop h5 {
@@ -893,6 +896,31 @@ h5 {
 
 
 
+#myCarousel {
+/*    margin-top: 40px;*/
+/*    width: 600px;*/
+/*    background-color: white;*/
+}
+
+
+    #myCarousel .item {
+        height: 420px;
+    }
+
+    #myCarousel .item img {
+        margin: 0 auto;
+        height: 90%;
+    }
+
+    .carousel-indicators li {
+        background-color: black;
+        border: 1px solid white;
+    }
+
+    .carousel-indicators .active {
+        background-color: black;
+        border: 1px solid white;
+    }
 
 /* *** FOOTER ELEMENTS *** */
 
