@@ -638,7 +638,7 @@ h5 {
 #donate {
     margin-top: 3.5rem;
 /*    background-color: #003287;*/  /* dark blue */
-    background-color: rgb(36, 188, 16);
+    background-color: rgb(0, 128, 0);
     color: white;
 }
 
@@ -663,16 +663,17 @@ h5 {
     }
 
     #donation-methods .btn {
-        border: 1px solid rgb(36, 188, 16);
+        border: 1px solid white;
         background-color: lightgrey;
-        color: rgb(36, 188, 16);
+        color: rgb(0, 128, 0);
         font-size: 1rem;
         font-weight: 600;
     }
 
     #donation-methods .btn:hover {
-        background-color: rgb(36, 188, 16);
+        background-color: rgb(0, 128, 0);
         color: white;
+        border: 1px solid white;
     }
 
     #bank-popup {
@@ -801,12 +802,12 @@ h5 {
     }
 
 
-#playlists {
+#playlists * {
     color: rgb(206, 9, 9);
 }
 
 #playlists  a {
-    color: rgb(206, 9, 9);
+
 }
 
     #playlists a img {
@@ -825,27 +826,27 @@ h5 {
 /*        color: rgb(206, 9, 9);*/
     }
 
-#tune-in {
+#tune-in * {
     color: rgb(38, 188, 176);
 }
 
 #tune-in a {
-    color: rgb(38, 188, 176);
+    
 }
 
     #tune-in a img {
         
     }
 
-    #tune-in a span {
+    #tune-in a spa* n {
     }
 
-#podcasts {
+#podcasts * {
     color: rgb(147, 11, 137);
 }
 
 #podcasts a {
-    color: rgb(147, 11, 137);
+    
 }
 
     #podcasts a img {
@@ -864,12 +865,12 @@ h5 {
     
 }
 
-#soundcloud {
+#soundcloud * {
     color: rgb(216, 88, 7);
 }
 
 #soundcloud a {
-    color: rgb(216, 88, 7);
+    
 }
 
     #soundcloud a img {
@@ -877,6 +878,17 @@ h5 {
     }
 
     #soundcloud a span {
+    }
+
+/* *** SHOP ELEMENTS *** */
+
+#shop {
+    background-color: rgb(0,128,0);
+}
+
+    #shop h5 {
+        text-align: center;
+        color: white;
     }
 
 
