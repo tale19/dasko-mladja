@@ -150,6 +150,7 @@ h5 {
 }
 
 #menu-button.displayed {
+    position: fixed;
     background: url("../Images/menu-close-x.png") no-repeat center;
     background-size: contain;
 }
@@ -307,16 +308,14 @@ h5 {
             list-style: none;
             width: 80%;
             margin: 0.4375rem auto;
-            background-color: rgba(255,255,255,0.95);
+/*            background-color: rgba(255,255,255,0.95);*/
         }
 
             #mobile-menu-items .submenu-item {
                 
                 z-index: 9;
                 position: relative;
-                /*
-                height: 40px;
-*/
+/*                height: 40px;*/
             }
 
 
@@ -369,8 +368,7 @@ h5 {
         margin: 0 auto;
         border: 2px solid magenta;
     }
-    
-    
+        
     #menu-button {
         display: none;
     }
@@ -401,7 +399,7 @@ h5 {
     
     #desktop-menu {
         display: block; /* block needed so "margin: 0 auto" can work */
-        width: 24rem;
+        width: 29rem;
         margin: 0 auto;
 /*        height: 40px;*/
         
@@ -412,7 +410,7 @@ h5 {
         position: absolute;
         display: block; /* OLDER BROWSERS  *** check out if block and inline-block are interchangable here */ 
         display: inline-flex; /*  NEWER BROWSERS */
-        height: 54px;
+        height: 100%;
         background-color: rgb(80, 80, 80);
     }
 
@@ -420,30 +418,37 @@ h5 {
             position: relative;
             display: inline-block;
             top: 0;
+            width: 6rem;
             border-left: 1px solid rgba(255,255,255,.2);
             margin: 0 -0.125rem;
             padding: 0.0625rem 0;
         }
            
         #desktop-menu-items .menu-item:last-child {
-            border-right: 1px solid rgba(0,0,0,.2);
+            border-right: 1px solid rgba(255,255,255,.2);
         }
 
 
         #desktop-menu-items .menu-item a {
             display: block;
-            margin: 0 auto;
+/*            margin: 0 auto;*/
             height: 100%;
             padding: 0.4375rem 1rem; /* 7px 16px */
             text-decoration: none;
 /*            pointer-events: none;  disables the link from activating */
+            text-align: center;
             font-weight: 800;
             font-size: 1rem;
             text-transform: uppercase;
             font-family: 'Oswald';
-            color: darkgray;
+            color: antiquewhite;
         }
 
+        #desktop-menu-items .menu-item a > span {
+            display: block;
+            margin-top: 0.5rem;
+        }
+        
         #desktop-menu-items .menu-item > a::first-letter {
                         font-size: 1.125rem;
                     }
