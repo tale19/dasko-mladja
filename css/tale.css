@@ -63,7 +63,7 @@ h5 {
 }
 
 
-.page-header {
+.header {
     background: purple url("../Images/header-xs.jpg") no-repeat top;
     min-height: 220px;
     height: 220px;
@@ -73,13 +73,13 @@ h5 {
 }
 
 @media screen and (min-width: 520px) {
-        .page-header {
+        .header {
             background-image: url("../Images/header-s.jpg");
             background-position: top;
         }
 }
 
-    /* black shader across the header background (can be called specifically via '.page-header > img' selector) */
+    /* black shader across the header background (can be called specifically via '.header > img' selector) */
     .shader {
         opacity: 0.5;
     }
@@ -300,7 +300,7 @@ h5 {
 
 
 @media screen and (min-width: 768px) {
-    .page-header {
+    .header {
         min-height: 420px;
         height: 420px;
 
@@ -492,7 +492,7 @@ h5 {
 
         .banner h5 {
             float: left;
-            margin: 7px 15px;
+            margin: 7px 0;
         }
 
 
@@ -500,7 +500,7 @@ h5 {
             float: right;
             height: 150px !important;
             width: 150px !important;
-            margin: -35px 15px !important;
+            margin: -35px 0 !important;
         }
 
 
