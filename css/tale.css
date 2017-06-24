@@ -8,10 +8,17 @@ html {
     font-size: 16px;
 }
 
+body {
+    background-color: rgb(60, 60, 60);
+}
+
 #wrapper {
     margin: 0 auto;
 }
 
+p {
+    color: white;
+}
 
 /*
 #mobileApp {
@@ -46,6 +53,7 @@ h3 {
     font-weight: 800;
     font-family: 'Oswald';
     text-transform: uppercase;
+    color: white;
 }
 
 h4 {
@@ -54,6 +62,7 @@ h4 {
     font-weight: 800;
     font-family: 'Oswald';
     text-transform: uppercase;
+    color: white;
 }
 
 h5 {
@@ -112,15 +121,17 @@ h5 {
 
 /* NAVIGATION BAR ELEMENTS */
 
-.nav {
+#nav {
+    top: 0px;
+    z-index: 999; /* it must have a declared z-index to behave like a sticky element! */
+/*    margin: 0 auto;*/
     height: 40px;
     width: 100%;
-    background-color: white;
-    margin: 0 auto;
     position: sticky; /* sticky pushes the next div down instead of floating above it, like fixed position does */
-    top: 0px;
-    box-shadow: 0px 3px 9px 1px #898989;
-    z-index: 999; /* it must have a declared z-index to behave like a sticky element! */
+/*    box-shadow: 0px 3px 9px 1px rgb(100, 100, 100);*/
+    background-color: rgb(60, 60, 60);
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
 } 
 
 #menu-button {
@@ -141,7 +152,7 @@ h5 {
     background-size: contain;
 }
 
-.nav #player {
+#nav #player {
     display: table;
 /*    position: absolute;*/
     left: 15px;
@@ -160,17 +171,18 @@ h5 {
             margin-right: 15px;
         }
 
-        .nav #playlive p {
+        #nav #playlive p {
             display: block;
             position: relative;
             cursor: default;
             font-size: 1rem;
             font-weight: 800;
             margin: 5px 1rem;
+            color: black;
 /*            background-color: yellow;*/
         }
 
-    .nav #play-pause {
+    #nav #play-pause {
         display: table-cell;
         vertical-align: middle;
         position: relative;
@@ -178,10 +190,19 @@ h5 {
         color: darkslategray;
     }
 
-    .nav #play-pause:hover {
+    #nav #play-pause:hover {
         color: darkred;
         cursor: pointer;
     }
+
+#navItemsHolder {
+    
+}
+
+#nav-container {
+    
+}
+
 
 
 /* THE FOLLOWING CODE IS TO STYLE THE >> MOBILE VIEW << OF THE MENU (display: block, position: fixed) THE SUBMENU */
@@ -303,14 +324,23 @@ h5 {
     .header {
         min-height: 420px;
         height: 420px;
+    }
 
+    #nav {
+        height: 60px;
+        
+    }
+    
+    .container {
+        
     }
     
     #navItemsHolder {
         display: block;
         position: relative;
-        height: 40px;
+/*        height: 40px;*/
         margin: 0 auto;
+        border: 2px solid magenta;
     }
     
     #menu-button {
@@ -321,7 +351,7 @@ h5 {
         display: none;
     }
 
-    .nav #player {
+    #nav #player {
         display: inline-table;
         float: left;
 /*        position: relative;*/
@@ -345,7 +375,7 @@ h5 {
         display: block; /* block needed so "margin: 0 auto" can work */
         width: 24rem;
         margin: 0 auto;
-        height: 40px;
+/*        height: 40px;*/
         
         
     }
@@ -354,15 +384,15 @@ h5 {
         position: absolute;
         display: block; /* OLDER BROWSERS  *** check out if block and inline-block are interchangable here */ 
         display: inline-flex; /*  NEWER BROWSERS */
-        height: 40px; /* the absolute height must match the height of nav */
-        background-color: white;
+        height: 54px;
+        background-color: rgb(60, 60, 60);
     }
 
         #desktop-menu-items .menu-item {
             position: relative;
             display: inline-block;
             top: 0;
-            border-left: 1px solid rgba(0,0,0,.2);
+            border-left: 1px solid rgba(255,255,255,.2);
             margin: 0 -0.125rem;
             padding: 0.0625rem 0;
         }
@@ -492,7 +522,7 @@ h5 {
 
         .banner h5 {
             float: left;
-            margin: 7px 0;
+            margin: 0.3125rem 0;
         }
 
 
@@ -603,7 +633,6 @@ h5 {
 
 .content-holder {
     margin: 0 auto;
-    background-color: wheat;
     position: relative;
 }
 
@@ -847,7 +876,7 @@ h5 {
     }
 
 #podcasts * {
-    color: rgb(147, 11, 137);
+    color: rgb(147, 82, 181);
 }
 
 #podcasts a {
