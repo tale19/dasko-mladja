@@ -968,20 +968,49 @@ h5 {
 #footer {
     display: block;
     position: relative;
+    box-sizing: content-box;
     bottom: 0;
     height: 420px; /* izbriši kad ubaciš sadržaj */
-    border: 12px black solid;
+    padding: 0;
+    border-top: 12px black solid;
     background-color: rgb(19, 19, 19);
     font-family: "Oswald", sans-serif;
     font-size: 12px;
     font-weight: normal;
 }
 
-#footer-client {
-    background-color: darkred;
-    height: 320px;
+#footer p {
+    font-size: 1.2rem;
 }
 
+#footer-client {
+    height: 320px;
+    width: 100%;
+}
+
+    #social-media {
+        margin: 40px auto;
+    }
+
+    #social-media-icons {
+        margin: 0 auto;
+        width: 305px;
+    }
+
+    #social-media p {
+        text-align: center;
+    }
+
+    #social-media a {
+    /*    display: inline-block;*/
+        margin: 0px 5px;
+    }
+
+#footer-author {
+    background-color: darkred;
+    width: 100%;
+    
+}
 
 /*
     #footer p {
