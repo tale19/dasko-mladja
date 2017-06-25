@@ -18,6 +18,7 @@ body {
 }
 
 p {
+    font-family: "Lato", "Arial", sans-serif;
     color: white;
 }
 
@@ -895,7 +896,6 @@ h5 {
 
 #shop {
     background-color: rgb(0, 128 ,0);
-    margin-bottom: 0; /** overrides banner bottom */
 }
 
     #shop h5 {
@@ -903,6 +903,13 @@ h5 {
         color: white;
     }
 
+    #shop ~ .container * {
+        color: rgb(0, 128 ,0);
+    }
+
+    #shop ~ .container a {
+        color: slategrey;
+    }
 
 
 #myCarousel {
@@ -958,19 +965,26 @@ h5 {
 /* *** FOOTER ELEMENTS *** */
 
 
-.footer {
+#footer {
     display: block;
     position: relative;
     bottom: 0;
     height: 420px; /* izbriši kad ubaciš sadržaj */
-    border: 1px black solid;
+    border: 12px black solid;
     background-color: rgb(19, 19, 19);
-    font-family: Oswald, sans-serif;
+    font-family: "Oswald", sans-serif;
     font-size: 12px;
     font-weight: normal;
 }
 
-    .footer p {
+#footer-client {
+    background-color: darkred;
+    height: 320px;
+}
+
+
+/*
+    #footer p {
     display: block;
     position: absolute;
     text-align: right;   
@@ -979,6 +993,7 @@ h5 {
     padding-right: 45px;
 }
 
+*/
 
 @media screen and (min-width: 768px) {
     
