@@ -172,7 +172,7 @@ h5 {
 #play-pause {
 /*    display: block;*/
 /*    margin: 0 auto;*/
-    left: 13px;
+    left: 14px;
     top: 13px;
     font-size: 25px;
     color: white;
@@ -674,16 +674,26 @@ h5 {
     #bank-popup {
         position: absolute;
         display: none;
+        width: 100%;
         z-index: 10;
-        top: 0;
+        bottom: 0;
         padding: 15px;
         border: 2px solid darkred;
         border-radius: 10px;
         background-color: white;
-        color: darkred;
     }
 
+    #bank-popup p {
+        color: darkred;
+        text-align: left;
+    }
 
+    #bank-popup span {
+        display: inline-block; 
+        white-space: nowrap;
+        margin-bottom: 20px; 
+        font-weight: bold; 
+    }
 
 .banner {
     margin: 40px auto;
@@ -907,23 +917,32 @@ h5 {
     }
 
     #myCarousel .item > h3 {
-        color: magenta;
+        color: black;
+    }
+
+    #myCarousel .item > p {
+        color: black;
+        text-align: center;
     }
 
     #myCarousel .item img {
 /*        position: absolute;*/
         margin: 0 auto;
 /*        height: 75%;*/
-        height: 380px;
-        margin-bottom: 90px;
+        height: 420px;
+        padding-bottom: 90px;
     }
-
+ 
     .carousel-caption {
 /*        height: 25%;*/
 /*        height: 60px;*/
-/*      position: absolute;*/
-/*      bottom: -50px;*/
+      position: absolute;
+      bottom: 25px;
 }
+
+    .carousel-indicators {
+        
+    }
 
     .carousel-indicators li {
         background-color: black;

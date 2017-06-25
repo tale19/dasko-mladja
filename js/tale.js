@@ -24,6 +24,7 @@ function main() {
         $('#mobile-menu').toggle('800');
         $(this).toggleClass('displayed');
         $('.submenu').hide();
+        $('.onclick-menu a').removeClass('displayed');
         console.log('toggle menu');
     });
     
@@ -38,6 +39,7 @@ function main() {
     $('.menu-item-no-submenu a').click(function(e) {
         $('#mobile-menu').hide('800');
         $('#menu-button').toggleClass('displayed');
+        $('.onclick-menu a').removeClass('displayed');
         console.log('link clicked, close the menu');
     });
     
@@ -51,7 +53,6 @@ function main() {
     $('#bank-popup button').click(function() {
         $('#bank-popup').hide();
     })
-    
     
     
     // Audio play-pause
