@@ -903,13 +903,27 @@ h5 {
 
 
     #myCarousel .item {
-        height: 420px;
+        
+    }
+
+    #myCarousel .item > h3 {
+        color: magenta;
     }
 
     #myCarousel .item img {
+/*        position: absolute;*/
         margin: 0 auto;
-        height: 90%;
+/*        height: 75%;*/
+        height: 380px;
+        margin-bottom: 90px;
     }
+
+    .carousel-caption {
+/*        height: 25%;*/
+/*        height: 60px;*/
+/*      position: absolute;*/
+/*      bottom: -50px;*/
+}
 
     .carousel-indicators li {
         background-color: black;
@@ -920,10 +934,6 @@ h5 {
         background-color: black;
         border: 1px solid white;
     }
-
-.carousel-caption {
-
-}
 
 
 /* *** FOOTER ELEMENTS *** */
