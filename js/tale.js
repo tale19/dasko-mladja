@@ -27,20 +27,21 @@ function main() {
         console.log('toggle menu');
     });
     
-    // To close the mobile menu when a menu item is clicked on
+    // To toggle submenu items on click (mobile view only)
+    $('.onclick-menu').click(function(e) {
+        $(this).find('.submenu').toggle();
+        $(this).find('a:first').toggleClass('displayed');
+        console.log('toggle submenu');
+    });
+    
+        // To close the mobile menu when a menu item is clicked on
     $('.menu-item-no-submenu a').click(function(e) {
         $('#mobile-menu').hide('800');
         $('#menu-button').toggleClass('displayed');
         console.log('link clicked, close the menu');
     });
     
-    // To toggle submenu items on click (mobile view only)
-    $('.onclick-menu').click(function() {
-       $('.submenu').toggle();
-        console.log('toggle submenu');
-    });
-    
-    
+
     // To display bank account details
     $('#bank').click(function() {
        $('#bank-popup').show();
@@ -72,9 +73,9 @@ function main() {
     
     
     // carousel for heading slideshow
+    /*
     var slideIndex = 0;
     carousel();
-    /*
     function carousel() {
         var i;
         var x = document.getElementsByClassName("mySlides");

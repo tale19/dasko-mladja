@@ -89,34 +89,34 @@ h5 {
         }
 }
 
-    /* black shader across the header background (can be called specifically via '.header > img' selector) */
-    .shader {
-        opacity: 0.5;
+/* black shader across the header background (can be called specifically via '.header > img' selector) */
+.shader {
+    opacity: 0.5;
+}
+
+.header-text {
+    position: absolute; /* places the text above the shader (image), ignoring the natural flow of elements */
+    text-align: center;
+    width: 100%; /* necessary for text-align to work */
+    top: 20px;
+}
+
+    h1 {
+        font-family: 'Ranga';
+        color: darkred;
+        text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+        font-size: 4rem;
+        padding-bottom: 0;
+        margin-bottom: 0;
     }
 
-    .header-text {
-        position: absolute; /* places the text above the shader (image), ignoring the natural flow of elements */
-        text-align: center;
-        width: 100%; /* necessary for text-align to work */
-        top: 20px;
+    h2 {
+        margin-top: 2rem;
+        font-family: 'Ranga', cursive;
+        color: darkred;
+        font-size: 2rem;
+        text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white; 
     }
-
-        h1 {
-            font-family: 'Ranga';
-            color: #582913;
-            text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
-            font-size: 3.5rem;
-            padding-bottom: 0;
-            margin-bottom: 0;
-        }
-
-        h2 {
-            margin-top: 2rem;
-            font-family: 'Ranga', cursive;
-            color: darkred;
-            font-size: 2rem;
-            text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white; 
-        }
 
 
 
@@ -160,19 +160,20 @@ h5 {
     display: block;
     z-index: 10000;
     left: 15px;
-    top: 4px;
+/*    top: 4px;*/
     height: 50px;
     width: 50px;
     cursor: pointer;
-    border-radius: 25px;
-    border: 1px solid white;
+    border-radius: 28px;
+    border: 3px solid white;
+    box-sizing: content-box;
 }
 
 #play-pause {
 /*    display: block;*/
 /*    margin: 0 auto;*/
-    left: 12px;
-    top: 12px;
+    left: 13px;
+    top: 13px;
     font-size: 25px;
     color: white;
 }
@@ -223,9 +224,6 @@ h5 {
     }
 
 */
-#navItemsHolder {
-    
-}
 
 #nav-container {
     
@@ -272,6 +270,10 @@ h5 {
     }
 
     #mobile-menu-items .menu-item:last-child {
+        border-bottom: 1px solid darkred;
+    }
+
+    #mobile-menu-items .menu-item a.displayed {
         border-bottom: 1px solid darkred;
     }
 
@@ -333,7 +335,7 @@ h5 {
 
 
         #mobile-menu-items .highlighted > a:active {
-            background-color: rgba(255,255,255,.95);
+            background-color: rgba(255,255,255,0.95);
             color: darkred;
         }
 
@@ -364,7 +366,6 @@ h5 {
     #navItemsHolder {
         display: block;
         position: relative;
-/*        height: 40px;*/
         margin: 0 auto;
         border: 2px solid magenta;
     }
@@ -429,7 +430,7 @@ h5 {
         }
 
 
-        #desktop-menu-items .menu-item a {
+        #desktop-menu-items .menu-item > a {
             display: block;
 /*            margin: 0 auto;*/
             height: 100%;
@@ -453,11 +454,11 @@ h5 {
                         font-size: 1.125rem;
                     }
 
-
         #desktop-menu-items .menu-item a:hover {
-            color: grey;
+            background-color: white;
+            color: darkgray;
+            box-shadow: 0px 0px 1px 1px #898989;
         }
-
 
 
             #desktop-menu-items .submenu {
@@ -469,7 +470,7 @@ h5 {
                 box-shadow: 0px 3px 9px 1px #898989;
                 background-color: white;
                 z-index: -1;
-                width: 100%;
+/*                width: 100%;*/
             }
 
                 
@@ -487,10 +488,11 @@ h5 {
 
 
                 #desktop-menu-items .submenu-item a {
-                  /*  display: block; /* if ignored, it will ignore the margin and padding, but not font and text properties, as they do apply to inline ("a" is an inline element by default) elements. /**/
+                    display: block; /* if ignored, it will ignore the margin and padding, but not font and text properties, as they do apply to inline ("a" is an inline element by default) elements. */
                     height: 100%;
+                    padding: 7px 15px;
                     font-weight: 800;
-                    font-size: 16px;
+                    font-size: 1rem;
                     text-transform: uppercase;
                     font-family: 'Oswald';
                     color: darkgray;
@@ -501,13 +503,12 @@ h5 {
 
 
                 #desktop-menu-items .submenu-item a::first-letter {
-                        font-size: 18px;
+                        font-size: 1.125rem;
                     }
 
                 #desktop-menu-items .submenu-item a:hover {
-                            background-color: darkgray;
-                            color: white;
-                            box-shadow: 0px 1px 1px 1px #898989;
+                            color: darkred;
+                            box-shadow: none;
                         }
 
 
@@ -520,7 +521,7 @@ h5 {
                         /* NOW TO DISABLE THIS ON MOBILE VIEW OF THE MENU */
 
                         #mobile-menu-items .menu-item:hover .submenu {
-                                display: block;
+                                display: none;
                             }
 
     
@@ -538,7 +539,7 @@ h5 {
                             }
 */
 
-                            #desktop-menu-items .highlighted a:hover {
+                            #desktop-menu-items .highlighted > a:hover {
                                 background-color: white;
                                 color: darkgray;
                                 box-shadow: 0px 0px 1px 1px #898989;
@@ -572,79 +573,6 @@ h5 {
     
 }   
 /* end of media query @ >=768px width */
-
-    
-
-/* THE FOLLOWING CODE IS WRITTEN TO BE TARGETED BY JS*/
-
-#menu-items.triggered-mobile {
-    display: none; /* hide menu by default on mobile */
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    background-color: rgba(250,250,250,.85);
-/*    background-color: white;*/
-}
-
-    #menu-items.triggered-mobile .menu-item {
-        display: block;
-        position: relative;
-        list-style: none;
-/*        height: 40px; defining height prevents the menu item from dropping down to reveal submenu items. don't define height */
-        top: 6rem;
-        width: 15rem;
-        margin: 0 auto;
-        box-shadow: 0px 3px 9px 1px #898989;
-        z-index: 100;
-/*        border: 2px solid yellow;*/
-/*        background-color: magenta;*/
-    }
-
-        #menu-items.triggered-mobile .menu-item a {
-            display: block; /* check if inline-block makes the submenu turn on its side -- for landscape view */
-            position: relative;
-            text-align: center;
-            padding: 0.4375rem 1rem; /* 7px 16px */
-            text-decoration: none;
-/*            pointer-events: none;  disables the link from activating */
-            font-weight: 800;
-            font-size: 1rem;
-            text-transform: uppercase;
-            font-family: 'Oswald';
-            color: darkgray;
-        }
-
-        #menu-items.triggered-mobile > .menu-item > a {
-            pointer-events: auto; /* disables the link from activating */
-            position: relative;
-            font-size: 1.5rem;
-            padding: 7px 0;
-            width: 100%;
-            z-index: -1;
-        }
-
-            #menu-items.triggered-mobile .submenu {
-            display: none;  /* js probably overrides this ??? */
-            position: relative; /* when set to relative, it pushes down the next menu item instead of hovering above it as with absolute positioning */
-            list-style: none;
-            left: -1%;
-            width: 100%;
-            margin-top: 7px;
-            background-color: rgba(235,235,235,.9);
-            z-index: 9999999;
-        }
-
-                #menu-items.triggered-mobile .submenu-item {
-                box-shadow: 0px 3px 9px 1px #898989;
-                z-index: 9;
-                position: relative;
-            }
-
-
-            /*   END OF CODE FOR JS  */
-
 
 
 
@@ -880,7 +808,7 @@ h5 {
 }
 
 #playlists  a {
-
+    
 }
 
     #playlists a img {
@@ -992,6 +920,11 @@ h5 {
         background-color: black;
         border: 1px solid white;
     }
+
+.carousel-caption {
+
+}
+
 
 /* *** FOOTER ELEMENTS *** */
 

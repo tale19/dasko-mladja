@@ -37,6 +37,7 @@
                 <span id="play-pause" class="glyphicon glyphicon-play"></span>
 -->
             </div> <!-- audio player -->
+            
             <div id="mobile-menu">
                 <ul id="mobile-menu-items">
                     <li class="menu-item menu-item-no-submenu">
@@ -50,14 +51,34 @@
                     <li tabindex="0" class="menu-item onclick-menu highlighted">
                         <a href="#mobile-donation-methods">Podrži!</a>
                         <ul id="mobile-donation-methods" class="submenu">
-                            <li class="submenu-item"><a href="https://www.patreon.com/daskoimladja" target="_blank">Patreon</a></li>
-                            <li class="submenu-item"><a href="https://www.paypal.me/daskoimladja/" target="_blank">PayPal</a></li>
-                            <li class="submenu-item"><a href="#">Račun</a></li>
+                            <li class="submenu-item">
+                                <a href="https://www.patreon.com/daskoimladja" target="_blank">Patreon</a>
+                            </li>
+                            <li class="submenu-item">
+                                <a href="https://www.paypal.me/daskoimladja/" target="_blank">PayPal</a>
+                            </li>
+                            <li class="submenu-item">
+                                <a href="#">Račun</a>
+                            </li>
                         </ul>
                     </li>
 
-                    <li class="menu-item menu-item-no-submenu">
-                        <a href="#">Podcast</a>
+                    <li class="menu-item onclick-menu">
+                        <a href="#mobile-donation-methods">Slušaj</a>
+                        <ul id="mobile-donation-methods" class="submenu">
+                            <li class="submenu-item">
+                                <a href="#playlists" target="_blank">Plejliste</a>
+                            </li>
+                            <li class="submenu-item">
+                                <a href="http://tunein.com/radio/RADIO-REPUBLIKA-s282527" target="_blank">TuneIn</a>
+                            </li>
+                            <li class="submenu-item">
+                                <a href="#podcasts">Podcast</a>
+                            </li>
+                            <li class="submenu-item">
+                                <a href="https://soundcloud.com/daskoimladja">Soundcloud</a>
+                            </li>
+                        </ul>
                     </li>
 
                     <li class="menu-item menu-item-no-submenu">
@@ -73,13 +94,11 @@
                             <span>Početna</span>
                         </a>
                     </li>
-
                     <li class="menu-item">
                         <a href="#about-us">
                             <span>O nama</span>
                         </a>
                     </li>
-
                     <li class="menu-item highlighted">
                         <a href="#desktop-donation-methods">
                             <span>Podrži</span>
@@ -90,13 +109,25 @@
                             <li class="submenu-item"><a href="#">Račun</a></li>
                         </ul>
                     </li>
-
-                    <li class="menu-item">
-                        <a href="#">
-                            <span>Podcast</span>
+                    <li class="menu-item highlighted">
+                        <a href="#desktop-listen">
+                            <span>Slušaj</span>
                         </a>
+                        <ul id="desktop-listen" class="submenu">
+                            <li class="submenu-item">
+                                <a href="#playlists" target="_blank">Plejliste</a>
+                            </li>
+                            <li class="submenu-item">
+                                <a href="http://tunein.com/radio/RADIO-REPUBLIKA-s282527" target="_blank">TuneIn</a>
+                            </li>
+                            <li class="submenu-item">
+                                <a href="#podcasts">Podcast</a>
+                            </li>
+                            <li class="submenu-item">
+                                <a href="https://soundcloud.com/daskoimladja">Soundcloud</a>
+                            </li>
+                        </ul>
                     </li>
-
                     <li class="menu-item">
                         <a href="#shop">
                             <span>Shop</span>
@@ -181,7 +212,7 @@
                     <h3>Slušaj uživo</h3>
                     <div id="playlists" class="media-type">
                     <a href="#collapsed-playlists" data-toggle="collapse" title="Skini plejlistu za svoj plejer i slušaj uživo na svom računaru"><img src="Images/media-playlist-icon-red-40.png"/><span>Plejliste</span></a>
-                        <p>Skini plejlistu za svoj plejer i slušaj uživo na svom računaru</p>
+                        <p>Izaberi plejlistu za svoj plejer i slušaj uživo na svom računaru</p>
                         <div id="collapsed-playlists" class="collapse">
                             <div class="playlist">
                                 <a href="audio/audio-playlist.pls" download="daskoimladja-playlist.pls" title="Plejeri koji podržavaju .pls: WinAmp, Windows Media Player, BS Player">
@@ -223,13 +254,13 @@
                         <div id="collapsing-podcast" class="collapse">
                             <div class="podcast">
                                 <a href="http://podcast.daskoimladja.com/?p=archive&cat=sa_muzikom" target="_blank">
-                                    <img src="Images/media-podcast-music-icon-40.png" />
+                                    <img src="Images/media-music-icon-purple-40.png" />
                                     <p>Sa muzikom</p>
                                 </a>
                             </div>        
                             <div class="podcast">
                                 <a href="http://podcast.daskoimladja.com/?p=archive&cat=bez_muzike" target="_blank">
-                                    <img src="Images/media-podcast-nomusic-icon-40.png" />
+                                    <img src="Images/media-nomusic-icon-purple-40.png" />
                                     <p>Bez muzike</p>
                                 </a>
                             </div>        
@@ -267,10 +298,16 @@
             <div class="carousel-inner">
                 <div class="item active">
                     <img src="Images/shop-mug-blue.png" alt="Plava šolja">
+                    <div class="carousel-caption">
+                        <button type="button" class="btn btn-primary">Kupi</button>
+                    </div>
                 </div>
 
                 <div class="item">
                     <img src="Images/shop-mug-black.png" alt="Crna šolja">
+                    <div class="carousel-caption">
+                        <button type="button" class="btn btn-primary">Kupi</button>
+                    </div>
                 </div>
 
                 <div class="item">
